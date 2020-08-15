@@ -11,8 +11,6 @@ CREATE TABLE cliente(
     PRIMARY KEY(bi)
 );
 
-
-
 INSERT into cliente values (123213, 'Fenias', 'Maputo', 'Mozambique');
 
 SELECT *
