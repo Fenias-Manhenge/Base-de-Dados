@@ -1,22 +1,23 @@
 USE EMPLOYEE
 GO
 
-CREATE TABLE cadastro(
-    code BIGINT NOT NULL,
-    nome VARCHAR(50) NOT NULL,
-    sexo VARCHAR(10) NOT NULL,
-    estadoCivil VARCHAR(10),
-    CHECK(code < 999999999 AND sexo IN ('MASCULINO', 'FEMENINO')),
+CREATE TABLE register(
+    code int NOT NULL,
+    names VARCHAR(50),
+    sex VARCHAR(10),
+    maritalStatus VARCHAR(15),
+    CHECK(code < 999999999 AND sex IN ('MASCULINO', 'FEMENINO')),
     PRIMARY KEY(code)
 );
-GO
+Go
 
-CREATE TABLE processamento(
+CREATE TABLE processing(
     code INT NOT NULL,
-    mes DATE NOT NULL,
-    salario bigint 
+    months DATE,
+    salary bigint, 
     PRIMARY KEY(code)
 );
-GO
+Go
 
-insert into cadastro values (11255, 'Fenias', 'Masculino', 'Solteiro');
+
+select* From register;
